@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/11/2017 19:50:23 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.model.Venda" table="venda" catalog="n2" optimistic-lock="version">
+        <id name="idVenda" type="java.lang.Integer">
+            <column name="idVenda" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="automovel" class="br.edu.qi.model.Automovel" fetch="select">
+            <column name="idAutomovel" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cliente" class="br.edu.qi.model.Cliente" fetch="select">
+            <column name="idCliente" not-null="true" />
+        </many-to-one>
+        <property name="dataVenda" type="timestamp">
+            <column name="dataVenda" length="19" not-null="true" />
+        </property>
+        <property name="valor" type="big_decimal">
+            <column name="valor" precision="10" scale="5" not-null="true" />
+        </property>
+        <set name="parcelas" table="parcela" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idVenda" not-null="true" />
+            </key>
+            <one-to-many class="br.edu.qi.model.Parcela" />
+        </set>
+    </class>
+</hibernate-mapping>

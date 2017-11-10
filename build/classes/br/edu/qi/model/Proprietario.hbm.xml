@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/11/2017 19:50:23 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.model.Proprietario" table="proprietario" catalog="n2" optimistic-lock="version">
+        <id name="idProprietario" type="java.lang.Integer">
+            <column name="idProprietario" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="60" not-null="true" />
+        </property>
+        <property name="endereco" type="string">
+            <column name="endereco" length="150" not-null="true" />
+        </property>
+        <property name="cidade" type="string">
+            <column name="cidade" length="60" not-null="true" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="2" not-null="true" />
+        </property>
+        <property name="telefone" type="string">
+            <column name="telefone" length="14" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="40" not-null="true" />
+        </property>
+        <set name="automovels" table="automovel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idProprietario" not-null="true" />
+            </key>
+            <one-to-many class="br.edu.qi.model.Automovel" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -19,7 +19,7 @@ import javax.persistence.Table;
  * @since 10/11/2017 19:50:22
  */
 @Entity
-@Table(name = "proprietario", catalog = "n2"
+@Table(name = "proprietario", catalog = "N2"
 )
 public class Proprietario implements java.io.Serializable {
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tableClientes" layoutX="16.0" layoutY="67.0" prefHeight="313.0" prefWidth="768.0">
+         <columns>
+            <TableColumn fx:id="tcNome" prefWidth="139.0" text="Nome" />
+            <TableColumn fx:id="tcEndereco" prefWidth="142.0" text="Endereco" />
+            <TableColumn fx:id="tcCidade" prefWidth="110.0" text="Cidade" />
+            <TableColumn fx:id="tcEstado" prefWidth="74.0" text="Estado" />
+            <TableColumn fx:id="tcTelefone" prefWidth="160.0" text="Telefone" />
+            <TableColumn fx:id="tcEmail" prefWidth="142.0" text="Email" />
+         </columns>
+      </TableView>
+      <Button layoutX="697.0" layoutY="26.0" mnemonicParsing="false" onAction="#openInseirClientes" text="Novo Cliente" />
+   </children>
+</Pane>

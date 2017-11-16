@@ -6,9 +6,28 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.TelaInicialController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.qi.controller.TelaInicialController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="1000.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Vendas">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Vender" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Manutençao">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" text="Proprietarios" />
+                  <MenuItem mnemonicParsing="false" text="Carros" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Financeiro">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Contas a Receber" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
 </AnchorPane>

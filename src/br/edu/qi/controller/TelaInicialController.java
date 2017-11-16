@@ -27,4 +27,6 @@ public class TelaInicialController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
+    
+    //TODO criar métodos para abrir modais
 }

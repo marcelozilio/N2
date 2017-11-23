@@ -9,10 +9,14 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <jar href="N2.jar" size="45148" download="eager" />
 =======
     <jar href="N2.jar" size="42897" download="eager" />
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+    <jar href="N2.jar" size="45148" download="eager" />
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
     <jar href="lib/antlr-2.7.7.jar" size="445288" download="eager" />
     <jar href="lib/c3p0-0.9.2.1.jar" size="423876" download="eager" />
     <jar href="lib/dom4j-1.6.1.jar" size="313898" download="eager" />

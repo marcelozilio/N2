@@ -8,9 +8,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javafx.event.ActionEvent;
 =======
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+import javafx.event.ActionEvent;
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -53,14 +57,20 @@ public class ClientesController implements Initializable {
         } catch (Exception e) {
             System.out.println("erro" + e.getMessage());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
         }
         
         if(!event.isConsumed()){
             preencherTabela();
         }
+<<<<<<< HEAD
 =======
         }        
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
     }
     
     private void preencherTabela() {

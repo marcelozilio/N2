@@ -22,10 +22,14 @@ public class InserirClienteController implements Initializable {
 
     private Stage stage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
     private ClienteBo bo;
     private Cliente cliente;
 
@@ -54,6 +58,7 @@ public class InserirClienteController implements Initializable {
             cliente.setCidade(Validacoes.validaTexto(tfCidade.getText(), "Cidade", tfCidade));
             cliente.setEstado(Validacoes.validaTexto(tfEstado.getText(), "Estado", tfEstado));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.bo.save(cliente);
             clear();
             new ViewUtils().msg("Cliente salvo com sucesso.", Alert.AlertType.INFORMATION);
@@ -66,6 +71,11 @@ public class InserirClienteController implements Initializable {
             
             
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+            this.bo.save(cliente);
+            clear();
+            new ViewUtils().msg("Cliente salvo com sucesso.", Alert.AlertType.INFORMATION);
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
         } catch (Exception e) {
             new ViewUtils().msg(e.getMessage(), Alert.AlertType.ERROR);
         }

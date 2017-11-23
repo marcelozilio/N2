@@ -11,11 +11,15 @@ import java.util.Set;
 /**
  * Implementação de negócios de {@link Cliente}.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
  *
  * @author Marcelo Zilio Correa
  * @since 23/11/2017 - 15:47
  */
 public class ClienteBo implements IBo<Cliente> {
+<<<<<<< HEAD
 =======
  * 
  * @author Marcelo Zilio Correa
@@ -23,6 +27,8 @@ public class ClienteBo implements IBo<Cliente> {
  */
 public class ClienteBo implements IBo<Cliente>{
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
 
     private ClienteDao dao;
 
@@ -30,6 +36,9 @@ public class ClienteBo implements IBo<Cliente>{
         this.dao = new ClienteDao();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
 
     @Override
     public void save(Cliente obj) throws Exception {
@@ -43,6 +52,7 @@ public class ClienteBo implements IBo<Cliente>{
         }
     }
 
+<<<<<<< HEAD
 =======
     
     @Override
@@ -57,6 +67,8 @@ public class ClienteBo implements IBo<Cliente>{
     }
     
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
     @Override
     public void update(Cliente obj) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -71,17 +83,23 @@ public class ClienteBo implements IBo<Cliente>{
     public List<Cliente> findAll() throws Exception {
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
             return this.dao.findAll();
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         } finally {
             this.dao.closeSession();
+<<<<<<< HEAD
 =======
             return dao.findAll();
             
         } catch (Exception e) {
             throw new Exception(e.getMessage());
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
         }
     }
 
@@ -89,8 +107,12 @@ public class ClienteBo implements IBo<Cliente>{
     public Cliente find(Cliente obj) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
     }    
 >>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
+=======
+    }
+>>>>>>> 94aa368... Criação de Bo e implementação de Client.
 }

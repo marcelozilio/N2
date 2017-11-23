@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.stage.Stage;
 
 /**
  * Controlodor de InserirCliente.fxml.
@@ -13,18 +14,30 @@ import javafx.fxml.Initializable;
  */
 public class InserirClienteController implements Initializable {
 
+    private Stage stage;
+
     /**
      * Initializes the controller class.
-     * @param url 
+     *
+     * @param url
      * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-    
+
     @FXML
     private void save() {
-        
+
     }
+
+    public Stage getStage() {
+        return stage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
 }

@@ -1,32 +1,68 @@
 package br.edu.qi.controller;
 
+import br.edu.qi.util.ViewUtils;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 /**
+ * Controlador de TelaIncial.fxml
  *
  * @author Marcelo Zilio Correa
  * @since 10/11/2017 - 19:42
  */
 public class TelaInicialController implements Initializable {
 
-    @FXML
-    private Label label;
+    private Stage stage;
 
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    public void openWindowClientes(ActionEvent event) {
+        try {
+            ClientesController controller = (ClientesController) new ViewUtils()
+                    .openWindow("/br/edu/qi/view/Clientes.fxml", this.stage, "Clientes");
+            controller.setStage(this.stage);
+        } catch (Exception e) {
+            System.out.println("erro" + e.getMessage());
+        }
+    }
+    
+    @FXML
+    public void openWidowProprietarios(ActionEvent event) {
+        try {
+            ProprietariosController controller =  (ProprietariosController) new ViewUtils()
+                    .openWindow("/br/edu/qi/view/Proprietarios.fxml", this.stage, "Proprietários");
+            controller.setStage(this.stage);
+        } catch (Exception e) {
+            System.out.println("erro" + e.getMessage());
+        }
+    }
+    
+    @FXML
+    public void openWindowInserirCarro(ActionEvent event) {
+        try {
+            InserirCarroController controller = (InserirCarroController) new ViewUtils()
+                    .openWindow("/br/edu/qi/view/InserirCarro.fxml", this.stage, "Inserir Carro");
+            controller.setStage(this.stage);
+        } catch (Exception e) {
+            System.out.println("erro" + e.getMessage());
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-    
-    //TODO criar métodos para abrir modais
+
+    public Stage getStage() {
+        return stage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
 }

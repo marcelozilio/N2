@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.qi.controller.TelaInicialController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.TelaInicialController">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="1000.0">
         <menus>
@@ -17,9 +16,9 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Manutençao">
             <items>
-              <MenuItem mnemonicParsing="false" text="Clientes" />
-                  <MenuItem mnemonicParsing="false" text="Proprietarios" />
-                  <MenuItem mnemonicParsing="false" text="Carros" />
+              <MenuItem mnemonicParsing="false" onAction="#openWindowClientes" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#openWidowProprietarios" text="Proprietarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#openWindowInserirCarro" text="Carros" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Financeiro">

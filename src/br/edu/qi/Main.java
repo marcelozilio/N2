@@ -1,9 +1,14 @@
 package br.edu.qi;
 
+import br.edu.qi.controller.TelaInicialController;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -16,12 +21,18 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/br/edu/qi/view/TelaInicial.fxml"));
-
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+        try {
+            stage.setTitle("Login");
+            stage.setResizable(false);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/qi/view/TelaInicial.fxml"));
+            Pane root = loader.load();
+            stage.setScene(new Scene(root));
+            stage.show();
+            TelaInicialController controle = loader.getController();
+            controle.setStage(stage);
+        } catch (IOException ex) {
+            System.out.println("erro init app->" + ex.getMessage());
+        }
     }
 
     /**

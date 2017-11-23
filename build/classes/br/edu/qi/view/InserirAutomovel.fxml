@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="433.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.InserirCarroController">
+<AnchorPane id="AnchorPane" prefHeight="433.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.InserirAutomovelController">
    <children>
       <GridPane layoutX="14.0" layoutY="14.0" prefHeight="364.0" prefWidth="320.0">
         <columnConstraints>
@@ -30,7 +30,7 @@
         </rowConstraints>
          <children>
             <Label text="Proprietrio" />
-            <ComboBox prefHeight="26.0" prefWidth="260.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="cbxProprietarios" prefHeight="26.0" prefWidth="260.0" GridPane.columnIndex="1" />
             <TextField prefHeight="26.0" prefWidth="196.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Ano" GridPane.rowIndex="1" />
             <Label text="Marca" GridPane.rowIndex="2" />
@@ -38,7 +38,7 @@
             <Label text="Modelo" GridPane.rowIndex="3" />
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Cor" GridPane.rowIndex="4" />
-            <ComboBox prefHeight="26.0" prefWidth="184.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbxCores" prefHeight="26.0" prefWidth="184.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="Descriçao" GridPane.rowIndex="5" />
             <TextArea prefHeight="112.0" prefWidth="223.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>

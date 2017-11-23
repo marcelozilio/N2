@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 public class ProprietarioDao extends GenericDao<Proprietario, Integer> {
 
-    public ProprietarioDao(Proprietario entity) {
-        super(entity);
+    public ProprietarioDao() {
+        super(new Proprietario());
     }
 }

@@ -25,7 +25,7 @@ public class TelaInicialController implements Initializable {
                     .openWindow("/br/edu/qi/view/Clientes.fxml", this.stage, "Clientes");
             controller.setStage(this.stage);
         } catch (Exception e) {
-            System.out.println("erro" + e.getMessage());
+             System.out.println("erro" + e.getMessage());
         }
     }
 
@@ -43,7 +43,7 @@ public class TelaInicialController implements Initializable {
     @FXML
     public void openWindowInserirCarro(ActionEvent event) {
         try {
-            InserirCarroController controller = (InserirCarroController) new ViewUtils()
+            InserirAutomovelController controller = (InserirAutomovelController) new ViewUtils()
                     .openWindow("/br/edu/qi/view/InserirAutomovel.fxml", this.stage, "Inserir Automovel");
             controller.setStage(this.stage);
         } catch (Exception e) {

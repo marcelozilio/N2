@@ -11,8 +11,8 @@ import java.io.Serializable;
  */
 public class ClienteDao extends GenericDao<Cliente, Integer>{
     
-    public ClienteDao(Cliente entity) {
-        super(entity);
+    public ClienteDao() {
+        super(new Cliente());
     }
     
 }

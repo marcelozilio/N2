@@ -1,5 +1,6 @@
 package br.edu.qi.controller;
 
+import br.edu.qi.bo.ClienteBo;
 import br.edu.qi.model.Cliente;
 import br.edu.qi.util.Validacoes;
 import br.edu.qi.util.ViewUtils;
@@ -20,6 +21,8 @@ import javafx.stage.Stage;
 public class InserirClienteController implements Initializable {
 
     private Stage stage;
+    
+    private ClienteBo bo;
     private Cliente cliente;
     
     @FXML
@@ -33,6 +36,7 @@ public class InserirClienteController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        this.bo = new ClienteBo();
         this.cliente = new Cliente();
     }
 
@@ -45,6 +49,11 @@ public class InserirClienteController implements Initializable {
             cliente.setEndereco(Validacoes.validaTexto(tfEndereco.getText(), "Endereço", tfEndereco));
             cliente.setCidade(Validacoes.validaTexto(tfCidade.getText(), "Cidade", tfCidade));
             cliente.setEstado(Validacoes.validaTexto(tfEstado.getText(), "Estado", tfEstado));
+            
+            this.bo.save(cliente);
+            
+            new ViewUtils().msg("Cliente salvo com sucesso.", Alert.AlertType.INFORMATION);
+            
             
             
         } catch (Exception e) {

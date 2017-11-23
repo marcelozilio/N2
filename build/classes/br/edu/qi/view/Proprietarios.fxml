@@ -3,9 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="br.edu.qi.controller.ProprietariosController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.ProprietariosController">
    <children>
       <TableView fx:id="tableClientes" layoutX="16.0" layoutY="67.0" prefHeight="313.0" prefWidth="768.0">
          <columns>
@@ -17,6 +18,10 @@
             <TableColumn fx:id="tcEmail" prefWidth="142.0" text="Email" />
          </columns>
       </TableView>
-      <Button layoutX="667.0" layoutY="26.0" mnemonicParsing="false" onAction="#openWindowInserirProprietario" prefHeight="25.0" prefWidth="115.0" text="Novo Proprietario" />
+      <HBox layoutX="643.0" layoutY="14.0" prefHeight="38.0" prefWidth="141.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#openWindowInserirProprietario" prefHeight="26.0" prefWidth="144.0" text="Novo Proprietario" />
+         </children>
+      </HBox>
    </children>
 </Pane>

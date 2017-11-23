@@ -6,11 +6,10 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
- * Controlador de TelaIncial.fxml
+ * Controlador de TelaIncial.fxml.
  *
  * @author Marcelo Zilio Correa
  * @since 10/11/2017 - 19:42
@@ -29,23 +28,33 @@ public class TelaInicialController implements Initializable {
             System.out.println("erro" + e.getMessage());
         }
     }
-    
+
     @FXML
     public void openWidowProprietarios(ActionEvent event) {
         try {
-            ProprietariosController controller =  (ProprietariosController) new ViewUtils()
+            ProprietariosController controller = (ProprietariosController) new ViewUtils()
                     .openWindow("/br/edu/qi/view/Proprietarios.fxml", this.stage, "Proprietários");
             controller.setStage(this.stage);
         } catch (Exception e) {
             System.out.println("erro" + e.getMessage());
         }
     }
-    
+
     @FXML
     public void openWindowInserirCarro(ActionEvent event) {
         try {
             InserirCarroController controller = (InserirCarroController) new ViewUtils()
-                    .openWindow("/br/edu/qi/view/InserirCarro.fxml", this.stage, "Inserir Carro");
+                    .openWindow("/br/edu/qi/view/InserirAutomovel.fxml", this.stage, "Inserir Automovel");
+            controller.setStage(this.stage);
+        } catch (Exception e) {
+            System.out.println("erro" + e.getMessage());
+        }
+    }
+
+    @FXML
+    public void openWindowVendas() {
+        try {
+            VendasController controller = (VendasController) new ViewUtils().openWindow("/br/edu/qi/view/Vendas.fxml", this.stage, "Vendas Realizadas");
             controller.setStage(this.stage);
         } catch (Exception e) {
             System.out.println("erro" + e.getMessage());

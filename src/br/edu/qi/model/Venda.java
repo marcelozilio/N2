@@ -55,7 +55,6 @@ public class Venda implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-
     @Column(name = "idVenda", unique = true, nullable = false)
     public Integer getIdVenda() {
         return this.idVenda;

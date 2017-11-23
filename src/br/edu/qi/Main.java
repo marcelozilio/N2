@@ -2,11 +2,8 @@ package br.edu.qi;
 
 import br.edu.qi.controller.TelaInicialController;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -22,7 +19,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         try {
-            stage.setTitle("Login");
+            stage.setTitle("Revenda de Carros");
             stage.setResizable(false);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/qi/view/TelaInicial.fxml"));
             Pane root = loader.load();

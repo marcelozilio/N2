@@ -7,7 +7,10 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
+<<<<<<< HEAD
 import javafx.event.ActionEvent;
+=======
+>>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -49,11 +52,15 @@ public class ClientesController implements Initializable {
             controller.setStage(this.stage);
         } catch (Exception e) {
             System.out.println("erro" + e.getMessage());
+<<<<<<< HEAD
         }
         
         if(!event.isConsumed()){
             preencherTabela();
         }
+=======
+        }        
+>>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
     }
     
     private void preencherTabela() {

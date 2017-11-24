@@ -21,7 +21,11 @@ import javafx.stage.Stage;
 public class InserirClienteController implements Initializable {
 
     private Stage stage;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
     private ClienteBo bo;
     private Cliente cliente;
 
@@ -49,9 +53,19 @@ public class InserirClienteController implements Initializable {
             cliente.setEndereco(Validacoes.validaTexto(tfEndereco.getText(), "Endereço", tfEndereco));
             cliente.setCidade(Validacoes.validaTexto(tfCidade.getText(), "Cidade", tfCidade));
             cliente.setEstado(Validacoes.validaTexto(tfEstado.getText(), "Estado", tfEstado));
+<<<<<<< HEAD
             this.bo.save(cliente);
             clear();
             new ViewUtils().msg("Cliente salvo com sucesso.", Alert.AlertType.INFORMATION);
+=======
+            
+            this.bo.save(cliente);
+            
+            new ViewUtils().msg("Cliente salvo com sucesso.", Alert.AlertType.INFORMATION);
+            
+            
+            
+>>>>>>> 0c66cba8669fa8e941dedbff56a0adec8a692f01
         } catch (Exception e) {
             new ViewUtils().msg(e.getMessage(), Alert.AlertType.ERROR);
         }

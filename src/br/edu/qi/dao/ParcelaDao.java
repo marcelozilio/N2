@@ -11,8 +11,8 @@ import java.io.Serializable;
  */
 public class ParcelaDao extends GenericDao<Parcela, Integer>{
     
-    public ParcelaDao(Parcela entity) {
-        super(entity);
+    public ParcelaDao() {
+        super(new Parcela());
     }
     
 }

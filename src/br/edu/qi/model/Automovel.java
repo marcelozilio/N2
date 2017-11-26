@@ -31,16 +31,16 @@ public class Automovel implements java.io.Serializable {
     private String modelo;
     private String cor;
     private String descricao;
-    private char estado;
-    private int tipo;
+    private String estado;
+    private String tipo;
     private String acessorios;
-    private char vendido;
+    private Integer vendido;
     private Set<Venda> vendas = new HashSet<Venda>(0);
 
     public Automovel() {
     }
 
-    public Automovel(Proprietario proprietario, String ano, String marca, String modelo, String cor, char estado, int tipo, char vendido) {
+    public Automovel(Proprietario proprietario, String ano, String marca, String modelo, String cor, String estado, String tipo, Integer vendido) {
         this.proprietario = proprietario;
         this.ano = ano;
         this.marca = marca;
@@ -51,7 +51,7 @@ public class Automovel implements java.io.Serializable {
         this.vendido = vendido;
     }
 
-    public Automovel(Proprietario proprietario, String ano, String marca, String modelo, String cor, String descricao, char estado, int tipo, String acessorios, char vendido, Set<Venda> vendas) {
+    public Automovel(Proprietario proprietario, String ano, String marca, String modelo, String cor, String descricao, String estado, String tipo, String acessorios, Integer vendido, Set<Venda> vendas) {
         this.proprietario = proprietario;
         this.ano = ano;
         this.marca = marca;
@@ -133,20 +133,20 @@ public class Automovel implements java.io.Serializable {
     }
 
     @Column(name = "estado", nullable = false, length = 1)
-    public char getEstado() {
+    public String getEstado() {
         return this.estado;
     }
 
-    public void setEstado(char estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 
     @Column(name = "tipo", nullable = false)
-    public int getTipo() {
+    public String getTipo() {
         return this.tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
@@ -160,11 +160,11 @@ public class Automovel implements java.io.Serializable {
     }
 
     @Column(name = "vendido", nullable = false, length = 1)
-    public char getVendido() {
+    public Integer getVendido() {
         return this.vendido;
     }
 
-    public void setVendido(char vendido) {
+    public void setVendido(Integer vendido) {
         this.vendido = vendido;
     }
 
@@ -175,5 +175,14 @@ public class Automovel implements java.io.Serializable {
 
     public void setVendas(Set<Venda> vendas) {
         this.vendas = vendas;
-    }    
+    }  
+
+    @Override
+    public String toString() {
+        return idAutomovel + " - " + modelo;
+    }
+
+    
+    
+    
 }

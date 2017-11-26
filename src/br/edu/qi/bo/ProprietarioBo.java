@@ -23,7 +23,7 @@ public class ProprietarioBo implements IBo<Proprietario> {
         try {
             this.dao.save(obj);
         } catch (Exception e) {
-            throw new Exception(e.getMessage());
+            throw new Exception("Não foi possível salvar o proprietário.");
         } finally {
             this.dao.closeSession();
         }
@@ -44,7 +44,7 @@ public class ProprietarioBo implements IBo<Proprietario> {
         try {
             return this.dao.findAll();
         } catch (Exception e) {
-            throw new Exception(e.getMessage());
+            throw new Exception("Não foi possível listar os proprietários.");
         } finally {
             this.dao.closeSession();
         }

@@ -32,20 +32,27 @@ public class Venda implements java.io.Serializable {
     private Automovel automovel;
     private Cliente cliente;
     private Date dataVenda;
-    private BigDecimal valor;
+    private Double valor;
+    private Integer qtdParcelas;
+    private Integer aVista;
     private Set<Parcela> parcelas = new HashSet<Parcela>(0);
 
     public Venda() {
     }
 
-    public Venda(Automovel automovel, Cliente cliente, Date dataVenda, BigDecimal valor) {
+    public Venda(Automovel automovel, Cliente cliente) {
+        this.automovel = automovel;
+        this.cliente = cliente;
+    }        
+
+    public Venda(Automovel automovel, Cliente cliente, Date dataVenda, Double valor) {
         this.automovel = automovel;
         this.cliente = cliente;
         this.dataVenda = dataVenda;
         this.valor = valor;
     }
 
-    public Venda(Automovel automovel, Cliente cliente, Date dataVenda, BigDecimal valor, Set<Parcela> parcelas) {
+    public Venda(Automovel automovel, Cliente cliente, Date dataVenda, Double valor, Set<Parcela> parcelas) {
         this.automovel = automovel;
         this.cliente = cliente;
         this.dataVenda = dataVenda;
@@ -94,15 +101,33 @@ public class Venda implements java.io.Serializable {
         this.dataVenda = dataVenda;
     }
 
-    @Column(name = "valor", nullable = false, precision = 10, scale = 5)
-    public BigDecimal getValor() {
+    @Column(name = "valor", nullable = false)
+    public Double getValor() {
         return this.valor;
     }
 
-    public void setValor(BigDecimal valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 
+    @Column(name = "qtdParcelas")
+    public Integer getQtdParcelas() {
+        return qtdParcelas;
+    }
+
+    public void setQtdParcelas(Integer qtdParcelas) {
+        this.qtdParcelas = qtdParcelas;
+    }
+
+    @Column(name = "aVista")
+    public Integer getaVista() {
+        return aVista;
+    }
+
+    public void setaVista(Integer aVista) {
+        this.aVista = aVista;
+    }        
+    
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "venda")
     public Set<Parcela> getParcelas() {
         return this.parcelas;
@@ -110,5 +135,10 @@ public class Venda implements java.io.Serializable {
 
     public void setParcelas(Set<Parcela> parcelas) {
         this.parcelas = parcelas;
+    }
+
+    @Override
+    public String toString() {
+        return "Venda - " + idVenda + " - R$" + valor;
     }
 }

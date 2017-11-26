@@ -11,8 +11,8 @@ import java.io.Serializable;
  */
 public class VendaDao extends GenericDao<Venda, Integer> {
 
-    public VendaDao(Venda entity) {
-        super(entity);
+    public VendaDao() {
+        super(new Venda());
     }
 
 }

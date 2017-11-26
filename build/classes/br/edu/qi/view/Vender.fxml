@@ -28,14 +28,14 @@
          <children>
             <Label text="Cliente" />
             <Label text="Automovel" GridPane.rowIndex="1" />
-            <ComboBox prefHeight="26.0" prefWidth="176.0" GridPane.columnIndex="1" />
-            <ComboBox prefHeight="26.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cbxClientes" prefHeight="26.0" prefWidth="176.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="cbxAutomoveis" prefHeight="26.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Valor" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tfValor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="A Vista" GridPane.rowIndex="3" />
-            <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox fx:id="cbAVista" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Qtd. de Parcelas" GridPane.rowIndex="4" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="tfQtdParcelas" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Button mnemonicParsing="false" onAction="#save" text="Salvar" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
          </children>
       </GridPane>

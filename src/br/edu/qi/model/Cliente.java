@@ -128,4 +128,11 @@ public class Cliente implements java.io.Serializable {
         this.vendas = vendas;
     }
 
+    @Override
+    public String toString() {
+        return idCliente + " - " + nome;
+    }
+    
+    
+
 }

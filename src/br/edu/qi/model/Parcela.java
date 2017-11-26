@@ -1,14 +1,13 @@
 package br.edu.qi.model;
 // Generated 10/11/2017 19:50:22 by Hibernate Tools 4.3.1
 
-import java.math.BigDecimal;
 import java.util.Date;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -25,18 +24,23 @@ import javax.persistence.TemporalType;
 @Table(name = "parcela", catalog = "n2")
 public class Parcela implements java.io.Serializable {
 
-    private Integer idParcela;
+    private ParcelaId id;
     private Venda venda;
-    private BigDecimal valor;
-    private BigDecimal multa;
+    private Double valor;
+    private Double multa;
     private Date dataParcela;
     private Date dataPgto;
-    private int pago;
+    private int pago;    
 
     public Parcela() {
     }
 
-    public Parcela(Venda venda, BigDecimal valor, BigDecimal multa, Date dataParcela, int pago) {
+    public Parcela(ParcelaId id, Venda venda) {
+        this.id = id;
+        this.venda = venda;
+    }    
+    
+    public Parcela(Venda venda, Double valor, Double multa, Date dataParcela, int pago) {
         this.venda = venda;
         this.valor = valor;
         this.multa = multa;
@@ -44,7 +48,8 @@ public class Parcela implements java.io.Serializable {
         this.pago = pago;
     }
 
-    public Parcela(Venda venda, BigDecimal valor, BigDecimal multa, Date dataParcela, Date dataPgto, int pago) {
+    public Parcela(ParcelaId idParcela, Venda venda, Double valor, Double multa, Date dataParcela, Date dataPgto, int pago) {
+        this.id = idParcela;
         this.venda = venda;
         this.valor = valor;
         this.multa = multa;
@@ -53,20 +58,20 @@ public class Parcela implements java.io.Serializable {
         this.pago = pago;
     }
 
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-
-    @Column(name = "idParcela", unique = true, nullable = false)
-    public Integer getIdParcela() {
-        return this.idParcela;
+    @EmbeddedId
+    @AttributeOverrides({
+        @AttributeOverride(name = "idVenda", column = @Column(name = "idVenda", nullable = false)),
+        @AttributeOverride(name = "sqParcela", column = @Column(name = "sq_parcela", nullable = false))})
+    public ParcelaId getId() {
+        return this.id;
     }
 
-    public void setIdParcela(Integer idParcela) {
-        this.idParcela = idParcela;
+    public void setId(ParcelaId idParcela) {
+        this.id = idParcela;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idVenda", nullable = false)
+    @JoinColumn(name = "idVenda", insertable = false, updatable = false)
     public Venda getVenda() {
         return this.venda;
     }
@@ -76,20 +81,20 @@ public class Parcela implements java.io.Serializable {
     }
 
     @Column(name = "valor", nullable = false, precision = 10, scale = 5)
-    public BigDecimal getValor() {
+    public Double getValor() {
         return this.valor;
     }
 
-    public void setValor(BigDecimal valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 
     @Column(name = "multa", nullable = false, precision = 10, scale = 5)
-    public BigDecimal getMulta() {
+    public Double getMulta() {
         return this.multa;
     }
 
-    public void setMulta(BigDecimal multa) {
+    public void setMulta(Double multa) {
         this.multa = multa;
     }
 
@@ -120,6 +125,6 @@ public class Parcela implements java.io.Serializable {
 
     public void setPago(int pago) {
         this.pago = pago;
-    }
+    }                
 
 }

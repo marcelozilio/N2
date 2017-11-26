@@ -46,7 +46,7 @@ public class ClienteBo implements IBo<Cliente>{
             obj.setVendas(new HashSet<>());
             this.dao.save(obj);
         } catch (Exception e) {
-            throw new Exception(e.getMessage());
+            throw new Exception("Não foi possível salvar o Cliente.");
         } finally {
             this.dao.closeSession();
         }
@@ -88,7 +88,7 @@ public class ClienteBo implements IBo<Cliente>{
 >>>>>>> 94aa368... Criação de Bo e implementação de Client.
             return this.dao.findAll();
         } catch (Exception e) {
-            throw new Exception(e.getMessage());
+            throw new Exception("Não foi possível listar os Clientes.");
         } finally {
             this.dao.closeSession();
 <<<<<<< HEAD

@@ -10,14 +10,27 @@ import br.edu.qi.model.Automovel;
  */
 public enum CoresEnum {
     
-    BRANCO,
-    PRETO,
-    PRATA,
-    VERMELHO,
-    AZUL,
-    VERDE,
-    AMARELO;
+    BRANCO("Branco"),
+    PRETO("Preto"),
+    PRATA("Prata"),
+    VERMELHO("Vermelho"),
+    AZUL("Azul"),
+    VERDE("Verde"),
+    AMARELO("Amarelo");
     
-    
+    private String value;
+
+    private CoresEnum(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+        
     
 }

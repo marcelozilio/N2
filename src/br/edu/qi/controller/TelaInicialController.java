@@ -60,6 +60,17 @@ public class TelaInicialController implements Initializable {
             System.out.println("erro" + e.getMessage());
         }
     }
+    
+    @FXML
+    public void openWindowContasReceber() {
+        try {
+            System.out.println("teste");
+            ContasReceberController controller = (ContasReceberController) new ViewUtils().openWindow("/br/edu/qi/view/ContasReceber.fxml", this.stage, "Contas à Receber");
+            controller.setStage(this.stage);
+        } catch (Exception e) {
+            System.out.println("erro" + e.getMessage());
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

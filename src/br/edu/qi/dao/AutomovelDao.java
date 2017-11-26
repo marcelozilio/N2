@@ -11,8 +11,8 @@ import java.io.Serializable;
  */
 public class AutomovelDao extends GenericDao<Automovel, Integer>{
     
-    public AutomovelDao(Automovel entity) {
-        super(entity);
+    public AutomovelDao() {
+        super(new Automovel());
     }
    
 }
